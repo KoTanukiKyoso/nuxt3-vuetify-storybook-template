@@ -3,9 +3,7 @@ import {withVuetifyTheme} from './withVeutifyTheme.decorator';
 
 import vuetify from './utils/vuetify'
 import sanitize from './utils/sanitize'
-// import vuetify from '~/plugins/vuetify'
-// import sanitize from './utils/sanitize'
-import '../assets/scss/main.scss'
+// import '../assets/scss/main.scss'
 
 setup((app) => {
     app.use(vuetify)
