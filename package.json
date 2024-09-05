@@ -35,7 +35,8 @@
     "unplugin-auto-import": "0.18.2",
     "unplugin-vue-components": "0.27.4",
     "vite-plugin-vuetify": "^2.0.4",
-    "vite-tsconfig-paths": "5.0.1"
+    "vite-tsconfig-paths": "5.0.1",
+    "vue-component-meta": "^2.1.6"
   },
   "dependencies": {
     "vue-sanitize-directive": "^0.2.1",

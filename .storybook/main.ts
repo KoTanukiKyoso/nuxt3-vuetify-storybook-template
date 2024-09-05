@@ -53,10 +53,7 @@ const config: StorybookConfig = {
                         },
                         // @ts-ignore
                         (componentName: string) => {
-                            if (
-                                componentName === 'NuxtImg' ||
-                                componentName === 'NuxtPicture'
-                            ) {
+                            if (componentName === 'NuxtImg' || componentName === 'NuxtPicture') {
                                 return {
                                     name: componentName,
                                     path: dirname + '/mocks/NuxtImage',
@@ -72,7 +69,7 @@ const config: StorybookConfig = {
                     dts: ".storybook/auto-imports.d.ts",
                 }),
                 tsconfigPaths({
-                    root: dirname + '/../',
+                    root: './',
                 }),
             ],
         } satisfies typeof config)
