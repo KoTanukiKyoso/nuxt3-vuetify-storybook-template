@@ -1,13 +1,20 @@
 import type {StorybookConfig} from '@storybook/vue3-vite'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-// import { join } from 'path'
+// import {resolve} from 'path'
 import {mergeConfig} from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import vue from '@vitejs/plugin-vue'
 
 const dirname: string = __dirname.replace(/\\/g, '/')
-// console.log(dirname)
+// console.log("dirname", dirname)
+//
+// const toAbsPath = (path: string): string => {
+//     return resolve(path).replace(/\\/g, '/')
+// }
+// const absPath: string = toAbsPath("");
+// console.log("absPath", absPath)
+
 const config: StorybookConfig = {
     stories: [
         '../components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
@@ -27,6 +34,14 @@ const config: StorybookConfig = {
         },
     },
     viteFinal: async (config) => {
+        // config.resolve.alias["#app"] = absPath + "/node_modules/nuxt/dist/app";
+        // config.resolve.alias["#app/*"] = absPath + "/node_modules/nuxt/dist/app/*";
+        // config.resolve.alias["#vue-router"] = absPath + "/node_modules/vue-router";
+        // config.resolve.alias["#imports"] = absPath + "/.nuxt/imports";
+        // config.resolve.alias["#build"] = absPath + "";
+        // config.resolve.alias["#build/*"] = absPath + "/*";
+        // config.resolve.alias["#components"] = absPath + "/.nuxt/components";
+        // config.resolve.alias[""] = "";
         return mergeConfig(config, {
             optimizeDeps: {exclude: ['fsevents']},
             resolve: {
@@ -68,10 +83,9 @@ const config: StorybookConfig = {
                     imports: ['vue', '@vueuse/core'],
                     dts: ".storybook/auto-imports.d.ts",
                 }),
-                tsconfigPaths({
-                    root: './',
-                }),
+                tsconfigPaths(),
             ],
+
         } satisfies typeof config)
     },
     staticDirs: [

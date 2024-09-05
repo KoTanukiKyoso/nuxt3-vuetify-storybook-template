@@ -1,7 +1,7 @@
 import { h } from 'vue';
 import StoryWrapper from './StoryWrapper.vue';
 
-export const DEFAULT_THEME = 'lightTheme';
+export const DEFAULT_THEME: string = 'lightTheme';
 
 export const withVuetifyTheme = (storyFn, context) => {
     // Pull our global theme variable, fallback to DEFAULT_THEME
