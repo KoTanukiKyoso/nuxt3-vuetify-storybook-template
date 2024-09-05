@@ -1,0 +1,44 @@
+{
+  "name": "nuxt-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build",
+    "serve-storybook": "npx http-server ./storybook-static",
+    "clean-node": "rm -rf node_modules",
+    "clean-nuxt": "rm -rf .nuxt",
+    "clean-project": "bun run clean-node && bun run clean-nuxt && rm -rf auto-imports.d.ts && rm -rf components.d.ts"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.4.47",
+    "@nuxt/devtools": "1.4.1",
+    "@nuxt/image": "1.7.1",
+    "@storybook/addon-essentials": "8.2.9",
+    "@storybook/addon-interactions": "8.2.9",
+    "@storybook/addon-links": "8.2.9",
+    "@storybook/addon-themes": "8.2.9",
+    "@storybook/test": "8.2.9",
+    "@storybook/vue3": "8.2.9",
+    "@storybook/vue3-vite": "8.2.9",
+    "@vueuse/nuxt": "11.0.3",
+    "chromatic": "11.7.1",
+    "nuxt": "3.13.0",
+    "nuxt-lodash": "2.5.3",
+    "sass": "1.77.8",
+    "storybook": "8.2.9",
+    "typescript": "5.5.4",
+    "unplugin-auto-import": "0.18.2",
+    "unplugin-vue-components": "0.27.4",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vite-tsconfig-paths": "5.0.1"
+  },
+  "dependencies": {
+    "vue-sanitize-directive": "^0.2.1",
+    "vuetify": "^3.7.1"
+  }
+}

@@ -1,0 +1,16 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+.data
+dist
+.DS_Store
+storybook-static
+.storybook/auto-imports.d.ts
+.storybook/components.d.ts
+.idea
+.idea/**/workspace.xml
+*storybook.log
